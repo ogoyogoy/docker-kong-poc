@@ -1,0 +1,13 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+- host: pms-gateway-v2-api.staging.svc.cluster.local
+  name: pms_services
+  port: 80
+  protocol: http
+  routes:
+  - name: pms_routes
+    paths:
+    - /api-gateway
+    strip_path: true
