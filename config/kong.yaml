@@ -9,5 +9,14 @@ services:
   routes:
   - name: pms_routes
     paths:
-    - /api-gateway
+    - /api/v1/pms
+    strip_path: true
+- host: sas-reservation-api.staging.svc.cluster.local
+  name: reservation_services
+  port: 80
+  protocol: http
+  routes:
+  - name: reservation_routes
+    paths:
+    - /api/v1/reservation
     strip_path: true
